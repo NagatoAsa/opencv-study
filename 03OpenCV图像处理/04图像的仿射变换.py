@@ -9,12 +9,12 @@ import matplotlib.pyplot as plt
 # cv.getAffineTransform
 # 该函数需要传入两个列表，分别保存三个坐标，这两个列表中的坐标分别是发生仿射变化前与仿射变化后的点的坐标，会创建一个2*3的变换矩阵
 img = cv.imread("kids.jpg")
-plt.imshow(img[:, :, ::-1])
+plt.imshow(img[..., ::-1])
 plt.show()
 rows, cols = img.shape[:2]
 pos1 = np.float32([[50, 50], [200, 50], [50, 200]])
 pos2 = np.float32([[100, 100], [200, 50], [100, 250]])
 M = cv.getAffineTransform(pos1, pos2)
 res = cv.warpAffine(img, M, (cols, rows))
-plt.imshow(res[:, :, ::-1])
+plt.imshow(res[..., ::-1])
 plt.show()

@@ -15,15 +15,15 @@ import matplotlib.pyplot as plt
 #       注：输出图像的大小，应该是(宽度, 高度)的形式，记住width=列数，height=行数
 
 kids = cv.imread("kids.jpg")
-plt.imshow(kids[:, :, ::-1])
+plt.imshow(kids[..., ::-1])
 plt.show()
 rows, cols = kids.shape[:2]
 print(rows)
 print(cols)
 M = np.float32([[1, 0, 50], [0, 1, 100]])
 res = cv.warpAffine(kids, M, (cols, rows))
-plt.imshow(res[:, :, ::-1])
+plt.imshow(res[..., ::-1])
 plt.show()
 res = cv.warpAffine(kids, M, (cols*2, rows*2))
-plt.imshow(res[:, :, ::-1])
+plt.imshow(res[..., ::-1])
 plt.show()

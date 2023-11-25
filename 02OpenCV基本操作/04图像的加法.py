@@ -10,14 +10,14 @@ import matplotlib.pyplot as plt
 # 这种差别在对两幅图像进行加法时会更加明显，OpenCV的结果会更好一些，所以尽量使用OpenCV中的函数
 
 rain = cv.imread("rain.jpg")
-plt.imshow(rain[:, :, ::-1])
+plt.imshow(rain[..., ::-1])
 plt.show()
 view = cv.imread("view.jpg")
-plt.imshow(view[:, :, ::-1])
+plt.imshow(view[..., ::-1])
 plt.show()
 img1 = cv.add(rain, view)
-plt.imshow(img1[:, :, ::-1])
+plt.imshow(img1[..., ::-1])
 plt.show()
 img2 = rain + view
-plt.imshow(img2[:, :, ::-1])
+plt.imshow(img2[..., ::-1])
 plt.show()

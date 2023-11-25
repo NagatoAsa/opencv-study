@@ -16,7 +16,7 @@ import matplotlib.pyplot as plt
 #       cv.INTER_CUBIC双三次插值
 
 kids = cv.imread("kids.jpg")
-plt.imshow(kids[:, :, ::-1])
+plt.imshow(kids[..., ::-1])
 plt.show()
 
 # 绝对尺寸
@@ -24,12 +24,12 @@ rows, cols = kids.shape[:2]
 print(rows)
 print(cols)
 res = cv.resize(kids, (2*cols, 2*rows))
-plt.imshow(res[:, :, ::-1])
+plt.imshow(res[..., ::-1])
 plt.show()
 print(res.shape)
 
 # 相对尺寸
 res1 = cv.resize(kids, None, fx=0.5, fy=0.5)
-plt.imshow(res1[:, :, ::-1])
+plt.imshow(res1[..., ::-1])
 plt.show()
 print(res1.shape)

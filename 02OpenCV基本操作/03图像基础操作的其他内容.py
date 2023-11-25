@@ -7,12 +7,12 @@ import matplotlib.pyplot as plt
 # 对于灰度图像，进返回相应的强度值，使用相同的方法对像素值进行修改。
 
 img = np.zeros((256, 256, 3), np.uint8)
-plt.imshow(img[:, :, ::-1])
+plt.imshow(img[..., ::-1])
 plt.show()
 print(img[100, 100])
 print(img[100, 100, 0])
 img[100, 100] = [0, 0, 255]
-plt.imshow(img[:, :, ::-1])
+plt.imshow(img[..., ::-1])
 plt.show()
 print(img[100, 100])
 
@@ -34,13 +34,13 @@ print(img.size)
 # img = cv.merge((b, g, r))
 
 dili = cv.imread("dili.jpg")
-plt.imshow(dili[:, :, ::-1])
+plt.imshow(dili[..., ::-1])
 plt.show()
 b, g, r = cv.split(dili)
 plt.imshow(b, cmap=plt.cm.gray)
 plt.show()
 img2 = cv.merge((b, g, r))
-plt.imshow(img2[:, :, ::-1])
+plt.imshow(img2[..., ::-1])
 plt.show()
 
 # 色彩空间的改变

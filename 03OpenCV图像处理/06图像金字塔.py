@@ -11,15 +11,15 @@ import matplotlib.pyplot as plt
 
 # 原图
 img = cv.imread("kids.jpg")
-plt.imshow(img[:, :, ::-1])
+plt.imshow(img[..., ::-1])
 plt.show()
 
 # 上采样
 imgup = cv.pyrUp(img)
-plt.imshow(imgup[:, :, ::-1])
+plt.imshow(imgup[..., ::-1])
 plt.show()
 
 # 下采样
 imgdown = cv.pyrDown(img)
-plt.imshow(imgdown[:, :, ::-1])
+plt.imshow(imgdown[..., ::-1])
 plt.show()
