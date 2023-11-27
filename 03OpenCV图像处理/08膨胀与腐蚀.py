@@ -28,7 +28,7 @@ import cv2 as cv
 img = cv.imread("letter.png")
 plt.imshow(img[..., ::-1])
 plt.show()
-kernel = np.ones((5, 5))
+kernel = np.ones((5, 5), np.uint8)
 img2 = cv.erode(img, kernel)
 plt.imshow(img2[..., ::-1])
 plt.show()
