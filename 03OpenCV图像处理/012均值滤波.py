@@ -14,7 +14,7 @@ import cv2 as cv
 #   1.src：输入图像
 #   2.ksize：卷积核的大小
 #   3.anchor：默认值为(-1, -1)，表示核中心
-#   4.borderType：边界类型
+#   4.borderType：边界类型（由于边界区域无法被卷积核处理，故需要指定对边界的处理方式）
 
 img = cv.imread("dogsp.jpeg")
 plt.imshow(img[..., ::-1])
