@@ -20,9 +20,9 @@ for line in lines:
     rho, theta = line[0]
     a = np.cos(theta)
     b = np.sin(theta)
-    x0 = rho * theta
+    x0 = rho * a
     y0 = rho * b
-    x1 = int((x0 + 1000) * (-b))
+    x1 = int(x0 + 1000 * (-b))
     y1 = int(y0 + 1000 * a)
     x2 = int(x0 - 1000 * (-b))
     y2 = int(y0 - 1000 * a)
