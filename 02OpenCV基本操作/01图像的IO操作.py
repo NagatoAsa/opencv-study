@@ -27,7 +27,7 @@ img2 = cv.imread("dili.jpg", 0)
 # 给图像绘制留下时间，否则窗口会出现无响应情况，并且图像无法显示出来（参数中填入等待时间，0为永远）
 # 另外也可以使用matplotlib对图像进行显示
 #   plt.imshow(img[:, :, ::-1])
-# 这里对图像进行索引切片的目的是为了将颜色通道进行反转（opncv使用的是BGR通道，而matplotlib使用的是RGB通道）
+# 这里对图像进行索引切片的目的是为了将颜色通道进行反转（opencv使用的是BGR通道，而matplotlib使用的是RGB通道）
 
 # 显示全彩图片
 cv.imshow("dili", img)
